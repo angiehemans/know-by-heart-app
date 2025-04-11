@@ -1,5 +1,5 @@
 {
-  "name": "mantine-minimal-next-template",
+  "name": "know-by-heart",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,7 +11,9 @@
   "dependencies": {
     "@mantine/core": "7.17.1",
     "@mantine/hooks": "7.17.1",
-    "next": "15.1.5",
+    "@tabler/icons-react": "^3.31.0",
+    "axios": "^1.8.1",
+    "next": "^15.1.5",
     "react": "19.0.0",
     "react-dom": "19.0.0"
   },
