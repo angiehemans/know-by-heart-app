@@ -27,7 +27,7 @@ interface TrackInfo {
   artist: string
   spotify_url: string
   spotify_artist_id: string
-  albumArt?: string
+  album_art_url?: string
 }
 
 interface ReviewForm {
@@ -136,7 +136,7 @@ export default function ReviewTrackPage() {
         spotify_song_id: track.id,
         spotify_url: track.spotify_url,
         spotify_artist_id: track.spotify_artist_id,
-        album_art_url: track.albumArt,
+        album_art_url: track.album_art_url,
         review_text: form.reviewText,
         rating: parseInt(form.rating),
         things_loved: form.thingsLoved,
@@ -162,9 +162,9 @@ export default function ReviewTrackPage() {
         Write your track recommendation
       </Title>
       <Flex gap="md">
-        {track.albumArt && (
+        {track.album_art_url && (
           <Image
-            src={track.albumArt}
+            src={track.album_art_url}
             alt="Album Art"
             w={48}
             radius="md"
