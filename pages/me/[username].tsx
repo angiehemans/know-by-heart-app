@@ -19,6 +19,7 @@ import Link from "next/link"
 import api from "../../utils/api"
 import { ReviewComponent } from "../../components/ReviewComponent"
 import { IconHome } from "@tabler/icons-react"
+import Footer from "../../components/Footer"
 
 interface Review {
   song_name: string
@@ -113,6 +114,7 @@ export default function PublicProfilePage({ profile }: Props) {
             <ReviewComponent key={i} review={review} />
           ))}
         </Stack>
+        <Footer />
       </Container>
     </>
   )

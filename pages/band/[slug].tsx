@@ -101,8 +101,8 @@ export default function BandProfilePage({ band }: Props) {
             <ReviewComponent key={i} review={review} />
           ))}
         </Stack>
+        <Footer />
       </Container>
-      <Footer />
     </>
   )
 }

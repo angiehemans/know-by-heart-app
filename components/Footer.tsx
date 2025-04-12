@@ -6,8 +6,7 @@ export default function Footer() {
     <Box component="footer" py="md" mt="xl">
       <Container size="sm">
         <Text size="sm" c="dimmed" ta="center">
-          © {new Date().getFullYear()} GoodSongs ❤︎ | Built in California by a
-          trans woman 🏳️‍⚧️
+          © {new Date().getFullYear()} GoodSongs ❤︎ | Built in California 🏳️‍⚧️
         </Text>
       </Container>
     </Box>

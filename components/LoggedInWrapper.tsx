@@ -67,12 +67,14 @@ export default function LoggedInWrapper({
             </ActionIcon>
 
             <ActionIcon
+              component="a"
+              href="/user/bookmarks"
               variant="subtle"
               color="gray"
+              aria-label="Bookmarks"
               size="lg"
-              aria-label="Review"
             >
-              <IconMessage2Heart size={24} stroke={2} />
+              <IconBookmark size={24} stroke={2} />
             </ActionIcon>
             <ActionIcon
               component="a"
@@ -83,17 +85,6 @@ export default function LoggedInWrapper({
               size="lg"
             >
               <IconUser size={24} stroke={2} />
-            </ActionIcon>
-
-            <ActionIcon
-              component="a"
-              href="/user/bookmarks"
-              variant="subtle"
-              color="gray"
-              aria-label="Bookmarks"
-              size="lg"
-            >
-              <IconBookmark size={24} stroke={2} />
             </ActionIcon>
             <ActionIcon
               component="a"
