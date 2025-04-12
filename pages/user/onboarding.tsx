@@ -18,7 +18,10 @@ export default function UserOnboarding() {
 
   const handleSubmit = async () => {
     try {
-      const res = await api.post("/user/onboarding", { user: { username } })
+      const lowercaseUsername = username.toLowerCase().trim()
+      const res = await api.post("/user/onboarding", {
+        user: { username: lowercaseUsername },
+      })
       setSuccess("Username set successfully!")
       setTimeout(() => router.push("/user/home"), 1000)
     } catch (err: any) {
