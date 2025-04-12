@@ -36,8 +36,9 @@ export default function HomePage() {
           </Title>
           <Text size="lg" ta="center" maw={600}>
             GoodSongs ❤︎ is a music discovery platform where you can review
-            tracks you've listened to, bookmark songs for later, and explore
-            what other fans are loving. Built for music lovers, by music lovers.
+            tracks you&apos;ve listened to, bookmark songs for later, and
+            explore what other fans are loving. Built for music lovers, by music
+            lovers.
           </Text>
 
           <Group>
