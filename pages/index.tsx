@@ -18,24 +18,24 @@ export default function HomePage() {
   return (
     <>
       <Head>
-        <title>Know By Heart | Music Reviews & Discovery</title>
+        <title>GoodSongs ❤︎ | Music Reviews & Discovery</title>
         <meta
           name="description"
-          content="Discover and review music with Know By Heart — your place to share thoughts on your favorite tracks and discover new sounds."
+          content="Discover and review music with GoodSongs ❤︎ — your place to share thoughts on your favorite tracks and discover new sounds."
         />
       </Head>
 
       <Container size="md" pb="xl">
         <Flex justify="space-between" align="center" py="lg">
-          <Text fw={700}>Know By Heart</Text>
+          <Text fw={700}>GoodSongs ❤︎</Text>
           <ColorSchemeToggle />
         </Flex>
         <Stack gap="xl" align="center">
           <Title order={1} ta="center">
-            Know By Heart
+            GoodSongs ❤︎
           </Title>
           <Text size="lg" ta="center" maw={600}>
-            Know By Heart is a music discovery platform where you can review
+            GoodSongs ❤︎ is a music discovery platform where you can review
             tracks you've listened to, bookmark songs for later, and explore
             what other fans are loving. Built for music lovers, by music lovers.
           </Text>
@@ -55,7 +55,7 @@ export default function HomePage() {
           </Group>
 
           <Box pt="lg">
-            <Text size="sm" color="dimmed" ta="center">
+            <Text size="sm" c="dimmed" ta="center">
               Log in with Spotify to get started — your recent plays, reviews,
               and favorites all in one place.
             </Text>
