@@ -65,13 +65,13 @@ export default function PublicProfilePage({ profile }: Props) {
   return (
     <>
       <Head>
-        <title>{profile.username} | Know By Heart</title>
+        <title>{profile.username} | GoodSongs ❤︎t</title>
         <meta name="description" content={`Reviews by ${profile.username}`} />
       </Head>
 
       <Container size="sm">
         <Flex justify="space-between" align="center" py="lg">
-          <Text fw={700}>Know By Heart</Text>
+          <Text fw={700}>GoodSongs ❤︎</Text>
           <ActionIcon
             component={Link}
             href="/user/home"

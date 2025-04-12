@@ -61,13 +61,13 @@ export default function BandProfilePage({ band }: Props) {
   return (
     <>
       <Head>
-        <title>{`${band.name} | Know By Heart`}</title>
+        <title>{`${band.name} | GoodSongs ❤︎`}</title>
         <meta name="description" content={`Reviews of ${band.name}`} />
       </Head>
 
       <Container>
         <Flex justify="space-between" align="center" py="lg">
-          <Text fw={700}>Know By Heart</Text>
+          <Text fw={700}>GoodSongs ❤︎</Text>
           <ActionIcon
             component={Link}
             href="/user/home"

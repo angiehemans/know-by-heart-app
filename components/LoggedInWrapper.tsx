@@ -46,7 +46,7 @@ export default function LoggedInWrapper({
   return (
     <Container size="sm">
       <Flex justify="space-between" align="center" py="lg">
-        <Text fw={700}>Know By Heart</Text>
+        <Text fw={700}>GoodSongs ❤︎</Text>
         <Flex gap="lg">
           <ColorSchemeToggle />
         </Flex>
