@@ -13,9 +13,12 @@ import {
   Paper,
   Image,
   Flex,
+  Checkbox,
+  Group,
 } from "@mantine/core"
 import api, { clearAuthHeaders, setAuthHeaders } from "../../utils/api"
 import LoggedInWrapper from "../../components/LoggedInWrapper"
+import classes from "../../components/styles/checkbuttons.module.css"
 
 // --------------------
 // Types
@@ -50,6 +53,9 @@ const loveOptions = [
   "Drums",
   "Guitar",
   "Bass",
+  "Keys",
+  "Vibe",
+  "Piano",
 ]
 
 export default function ReviewTrackPage() {
@@ -197,6 +203,31 @@ export default function ReviewTrackPage() {
               onChange={(value) => setForm({ ...form, rating: value })}
             />
           </Flex>
+          <Checkbox.Group
+            label="What did you love about this track? (choose up to 3)"
+            value={form.thingsLoved}
+            onChange={(value) => {
+              if (value.length <= 3) {
+                setForm({ ...form, thingsLoved: value })
+              }
+            }}
+          >
+            <Group mt="xs" gap="sm" justify="flex-start">
+              {loveOptions.map((option) => {
+                const isChecked = form.thingsLoved.includes(option)
+
+                return (
+                  <Checkbox
+                    key={option}
+                    value={option}
+                    label={option}
+                    className={isChecked ? classes.checked : classes.unchecked}
+                    disabled={form.thingsLoved.length >= 3 && !isChecked}
+                  />
+                )
+              })}
+            </Group>
+          </Checkbox.Group>
           <Textarea
             label="Write a review (optional)"
             placeholder="What stood out to you?"
@@ -207,16 +238,7 @@ export default function ReviewTrackPage() {
             autosize
             minRows={6}
           />
-          <MultiSelect
-            label="What did you love about this track? (choose up to 3)"
-            data={loveOptions}
-            value={form.thingsLoved}
-            onChange={(value) =>
-              setForm({ ...form, thingsLoved: value.slice(0, 3) })
-            }
-            placeholder="Select up to 3"
-            searchable
-          />
+
           <Button type="submit" fullWidth>
             Submit Review
           </Button>
