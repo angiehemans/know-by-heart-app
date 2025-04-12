@@ -14,8 +14,9 @@ interface TrackData {
   name: string
   artist: string
   album: string
-  albumArt?: string
+  album_art_url?: string
   spotify_url: string
+  band_slug?: string
 }
 
 interface Review {
@@ -138,7 +139,7 @@ export default function UserDashboard() {
           spotify_song_id: track.id,
           song_name: track.name,
           band_name: track.artist,
-          album_art_url: track.albumArt,
+          album_art_url: track.album_art_url,
           album_title: track.album,
           spotify_url: track.spotify_url,
         })

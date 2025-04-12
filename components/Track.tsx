@@ -7,6 +7,7 @@ import {
   Tooltip,
   Paper,
   Divider,
+  Anchor,
 } from "@mantine/core"
 import {
   IconBookmark,
@@ -21,8 +22,9 @@ interface TrackData {
   name: string
   artist: string
   album: string
-  albumArt?: string
+  album_art_url?: string
   spotify_url: string
+  band_slug?: string
 }
 
 interface TrackProps {
@@ -44,9 +46,9 @@ export function Track({
     <Paper>
       <Flex justify="space-between" gap="sm" direction="row">
         <Flex gap="sm">
-          {track.albumArt && (
+          {track.album_art_url && (
             <Image
-              src={track.albumArt}
+              src={track.album_art_url}
               width={48}
               height={48}
               alt="Album Art"
@@ -57,9 +59,17 @@ export function Track({
             <Text lineClamp={1} fw={500}>
               {track.name}
             </Text>
-            <Text size="sm" c="dimmed">
-              {track.artist}
-            </Text>
+            {track.band_slug ? (
+              <Anchor component={Link} href={`/band/${track.band_slug}`}>
+                <Text size="sm" c="dimmed">
+                  {track.artist}
+                </Text>
+              </Anchor>
+            ) : (
+              <Text size="sm" c="dimmed">
+                {track.artist}
+              </Text>
+            )}
           </Flex>
         </Flex>
         <Flex gap="sm">

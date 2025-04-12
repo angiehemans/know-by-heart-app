@@ -14,8 +14,9 @@ interface TrackData {
   name: string
   artist: string
   album: string
-  albumArt?: string
+  album_art_url?: string
   spotify_url: string
+  band_slug?: string
 }
 
 interface User {
@@ -72,8 +73,9 @@ export default function BookmarkedTracksPage() {
           name: b.song_name || "Untitled",
           artist: b.band_name || "Unknown Artist",
           album: b.album_title || "Unknown Album",
-          albumArt: b.album_art_url,
+          album_art_url: b.album_art_url,
           spotify_url: b.spotify_url || "#",
+          band_slug: b.band_slug,
         }))
 
         setBookmarkedTracks(mappedTracks)

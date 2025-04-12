@@ -9,12 +9,14 @@ import {
   Divider,
   Flex,
   ActionIcon,
+  BackgroundImage,
 } from "@mantine/core"
 import Head from "next/head"
 import Link from "next/link"
 import { IconHome } from "@tabler/icons-react"
 import { ReviewComponent } from "../../components/ReviewComponent"
 import axios from "axios"
+import Footer from "../../components/Footer"
 
 interface Review {
   song_name: string
@@ -59,7 +61,7 @@ export default function BandProfilePage({ band }: Props) {
   return (
     <>
       <Head>
-        <title>{band.name} | Know By Heart</title>
+        <title>{`${band.name} | Know By Heart`}</title>
         <meta name="description" content={`Reviews of ${band.name}`} />
       </Head>
 
@@ -78,15 +80,12 @@ export default function BandProfilePage({ band }: Props) {
         </Flex>
         <Divider />
         <Stack gap="md" my="md">
-          <Title order={2}>{band.name}</Title>
           {band.photo_url && (
-            <Image
-              src={band.photo_url}
-              alt={`${band.name} Band Photo`}
-              radius="md"
-              width={160}
-              height="auto"
-            />
+            <BackgroundImage src={band.photo_url} h={200} p="md" radius="md">
+              <Title order={1} c="white">
+                {band.name}
+              </Title>
+            </BackgroundImage>
           )}
           <Text c="dimmed">
             {band.review_count} review{band.review_count !== 1 ? "s" : ""}
@@ -103,6 +102,7 @@ export default function BandProfilePage({ band }: Props) {
           ))}
         </Stack>
       </Container>
+      <Footer />
     </>
   )
 }

@@ -29,6 +29,7 @@ interface Review {
   things_loved: string[]
   spotify_url: string
   spotify_song_id: string
+  band_slug?: string
 }
 
 interface ReviewComponentProps {
@@ -107,9 +108,11 @@ export function ReviewComponent({ review }: ReviewComponentProps) {
             <Text lineClamp={1} fw={500}>
               {review.song_name}
             </Text>
-            <Text size="sm" c="dimmed">
-              {review.band_name}
-            </Text>
+            <Anchor href={`/band/${review.band_slug}`}>
+              <Text size="sm" c="dimmed">
+                {review.band_name}
+              </Text>
+            </Anchor>
           </Flex>
         </Flex>
         <ActionIcon
