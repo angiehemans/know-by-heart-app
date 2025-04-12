@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react"
 import { useRouter } from "next/router"
-import { Container, Text, Loader, Stack } from "@mantine/core"
+import { Container, Text, Loader, Stack, Image, Flex } from "@mantine/core"
 import api, { clearAuthHeaders, setAuthHeaders } from "../../utils/api"
 
 import { Track } from "../../components/Track"
 import LoggedInWrapper from "../../components/LoggedInWrapper"
+import Link from "next/link"
 
 // --------------------
 // Types
@@ -187,6 +188,12 @@ export default function UserDashboard() {
                 No recent Spotify tracks found or unable to fetch.
               </Text>
             )}
+            <Flex gap="sm" align="center" justify="center">
+              <Text>your recent tracks provided by</Text>
+              <Link href="https://open.spotify.com/" target="_blank">
+                <Image src="/spotify_logo.svg" h="32px" fit="contain" />{" "}
+              </Link>
+            </Flex>
           </Stack>
         )}
       </Container>

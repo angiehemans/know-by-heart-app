@@ -203,6 +203,16 @@ export default function ReviewTrackPage() {
               onChange={(value) => setForm({ ...form, rating: value })}
             />
           </Flex>
+          <Textarea
+            label="Write your review"
+            placeholder="Why would you reccomend this song to your friends?"
+            value={form.reviewText}
+            onChange={(e) =>
+              setForm({ ...form, reviewText: e.currentTarget.value })
+            }
+            autosize
+            minRows={6}
+          />
           <Checkbox.Group
             label="What did you love about this track? (choose up to 3)"
             value={form.thingsLoved}
@@ -228,16 +238,6 @@ export default function ReviewTrackPage() {
               })}
             </Group>
           </Checkbox.Group>
-          <Textarea
-            label="Write a review (optional)"
-            placeholder="What stood out to you?"
-            value={form.reviewText}
-            onChange={(e) =>
-              setForm({ ...form, reviewText: e.currentTarget.value })
-            }
-            autosize
-            minRows={6}
-          />
 
           <Button type="submit" fullWidth>
             Submit Review
