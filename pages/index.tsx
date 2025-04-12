@@ -45,12 +45,7 @@ export default function HomePage() {
             <Button component={Link} href="/login" size="md">
               Log In
             </Button>
-            <Button
-              component={Link}
-              href="/sign_up"
-              variant="outline"
-              size="md"
-            >
+            <Button component={Link} href="/signup" variant="outline" size="md">
               Sign Up
             </Button>
           </Group>
