@@ -188,8 +188,8 @@ export default function UserDashboard() {
                 No recent Spotify tracks found or unable to fetch.
               </Text>
             )}
-            <Flex gap="sm" align="center" justify="center">
-              <Text>your recent tracks provided by</Text>
+            <Flex gap="sm" align="center" justify="center" wrap="wrap">
+              <Text ta="center">your recent tracks provided by</Text>
               <Link href="https://open.spotify.com/" target="_blank">
                 <Image src="/spotify_logo.svg" h="32px" fit="contain" />{" "}
               </Link>
