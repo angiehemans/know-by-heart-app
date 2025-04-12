@@ -90,7 +90,7 @@ export default function PublicProfilePage({ profile }: Props) {
               src={profile.profile_picture_url}
               alt="Profile Picture"
               radius="50%"
-              size="lg"
+              size="100px"
             />
           )}
         </Flex>
@@ -99,9 +99,9 @@ export default function PublicProfilePage({ profile }: Props) {
           <Text size="sm" c="dimmed">
             {profile.reviews.length} reviews
           </Text>
-          <Button size="compact-xs" variant="light" color="gray">
+          {/* <Button size="compact-xs" variant="light" color="gray">
             follow
-          </Button>
+          </Button> */}
         </Flex>
         <Divider />
         <Title order={4} my="md">
